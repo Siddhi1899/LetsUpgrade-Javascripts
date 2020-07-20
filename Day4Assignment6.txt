@@ -1,0 +1,41 @@
+<html>
+    <head> </head>
+    <body onload="promptForNumber();">
+
+
+<script>
+    function promptForNumber( text)
+{
+    if(text == '' ){
+     text = "Please enter a number from 1 to 100";   
+    }
+    var number = parseInt(window.prompt(text, ""));
+    checkNumber(number);
+
+}
+function checkNumber(number){
+
+    if (number <= 100 && number >= 1) {
+    document.write("Your number (" + number + ")  matches requirements", "");
+} else if (isNaN(number)) {
+    promptForNumber("It is not a number. Please enter a number from 1 to 100", "");
+} else {
+    promptForNumber("Your number (" + number + ") is not between 1 and 100", "");
+}
+
+}
+
+
+</script>
+
+    </body>
+</html>
+
+
+
+
+
+//output//
+Your number (4) matches requirements
+
+Your number (101) is not between 1 and 100
